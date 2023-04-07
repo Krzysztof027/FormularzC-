@@ -1,0 +1,73 @@
+﻿<Window x:Class="WpfApplication7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" 
+        Height="350" 
+        Width="525">
+    <StackPanel x:Name="App">
+        <!--ustawia sposób zawijania tekstu-->
+        <!--Gets or sets a value indicating (wkazujac) whether pressing ENTER in a multiline TextBox control-->
+        <TextBlock FontFamily="Arial"
+            Grid.Row="0"
+            Background="White"
+            Padding="10"
+            FontWeight="Bold"
+            FontSize="17">
+            Podaj 2 główne miasta wojewódstwa Kujawsko-Pomorskiego</TextBlock>
+            
+        <TextBlock Grid.Row="1" Background="Wheat" Margin="10">
+        <RadioButton
+            GroupName="red"
+            Content="Krakow, Chałupki"
+            x:Name="odpa"
+            Checked="Odp_A_checked"
+            FontFamily="Arial"
+            FontSize="18"
+            Margin="10"
+            BorderBrush="Black"
+            BorderThickness="3" />
+        </TextBlock>
+        
+        <TextBlock Grid.Row="2" Background="Wheat" Margin="10">
+        <RadioButton
+            GroupName="red"
+            Content="Wrocław, Lublin"
+            x:Name="odpb"
+            Checked="Odp_B_Checked"
+            FontFamily="Arial"
+            FontSize="18"
+            Margin="10"
+            BorderBrush="Black"
+            BorderThickness="3" 
+            />
+        </TextBlock>
+
+        <TextBlock Grid.Row="3" Background="Wheat" Margin="10">
+            <RadioButton
+                GroupName="red"
+                Content="Toruń, Bydgoszcz"
+                x:Name="odpc"
+                Checked="Odp_C_Checked"
+                FontFamily="Arial"
+                FontSize="18"
+                Margin="10" 
+                BorderBrush="Black"
+                BorderThickness="3">
+            </RadioButton>
+        </TextBlock>
+        <!--Thickness - grubość, border brush - pędzel graniczny-->
+        <!--GroupName stosujemy, żeby móc zaznaczać tylko 1 wiersz-->
+
+        <TextBlock Grid.Row="4" Margin="10">
+                <Button Click="Sprawdz"
+                        BorderBrush="Black"
+                        BorderThickness="5"
+                        Background="Aqua"
+                        Padding="7"
+                        Name="Button"
+                        FontFamily="Arial"
+                        FontStyle="Normal" 
+                        FontSize="20">Sprawdź</Button>
+        </TextBlock>
+    </StackPanel>
+</Window>
